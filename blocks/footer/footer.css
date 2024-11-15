@@ -10,8 +10,9 @@ footer .footer > div {
   padding: 40px 24px 24px;
 }
 
-footer .footer > div > pre {
+footer .footer .section default-content-wrapper > pre {
    background-color: black;
+    color: white;
 }
 
 footer .footer p {
