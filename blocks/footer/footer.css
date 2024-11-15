@@ -4,6 +4,7 @@ footer {
 }
 
 footer .footer > div {
+     background-color: black;
   margin: auto;
   max-width: 1200px;
   padding: 40px 24px 24px;
