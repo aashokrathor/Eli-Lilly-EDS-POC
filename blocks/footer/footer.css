@@ -1,5 +1,5 @@
 footer {
-  background-color: black;
+  background-color: var(--light-color);
   font-size: var(--body-font-size-xs);
 }
 
@@ -7,11 +7,11 @@ footer .footer > div {
   margin: auto;
   max-width: 1200px;
   padding: 40px 24px 24px;
-    background-color: black;
 }
 
 footer .footer p {
   margin: 0;
+    background-color: black;
 }
 
 @media (width >= 900px) {
