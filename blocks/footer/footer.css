@@ -9,15 +9,14 @@ footer .footer > div {
   max-width: 1200px;
   padding: 40px 24px 24px;
 }
+footer .footer p {
+  margin: 0;
+    background-color: black;
+}
 
 footer .footer .section .default-content-wrapper > p {
    background-color: black;
     color: white;
-}
-
-footer .footer p {
-  margin: 0;
-    background-color: black;
 }
 
 @media (width >= 900px) {
