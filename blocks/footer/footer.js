@@ -21,8 +21,8 @@ export default async function decorate(block) {
     paragraph.classList.add(`footer-paragraph-${index + 1}`);
   });
 
-  const MainDIV = document.createElement('div');
-  MainDIV.className = 'footer-paragraph-Maincontainer';
+  const mainDiv = document.createElement('div');
+  mainDiv.className = 'footer-paragraph-maincontainer';
   const firstDiv = document.createElement('div');
   firstDiv.className = 'footer-paragraph-group-1';
   const secondDiv = document.createElement('div');
@@ -41,12 +41,12 @@ export default async function decorate(block) {
   const subContainerDiv = document.createElement('div');
   subContainerDiv.className = 'footer-paragraph-sub-container';
 
-  MainDIV.appendChild(containerDiv);
-  MainDIV.appendChild(subContainerDiv);
+  mainDiv.appendChild(containerDiv);
+  mainDiv.appendChild(subContainerDiv);
   containerDiv.appendChild(firstDiv);
   containerDiv.appendChild(secondDiv);
   subContainerDiv.appendChild(thirdDiv);
-  footer.appendChild(MainDIV);
+  footer.appendChild(mainDiv);
 
   while (fragment.firstElementChild) {
     footer.append(fragment.firstElementChild);
