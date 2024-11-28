@@ -17,6 +17,7 @@ import {
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
  */
+/*
 function buildHeroBlock(main) {
   const h1 = main.querySelector('h1');
   const picture = main.querySelector('picture');
@@ -26,7 +27,7 @@ function buildHeroBlock(main) {
     section.append(buildBlock('hero', { elems: [picture, h1] }));
     main.prepend(section);
   }
-}
+} */
 
 /**
  * load fonts.css and set a session storage flag
@@ -46,7 +47,7 @@ async function loadFonts() {
  */
 function buildAutoBlocks(main) {
   try {
-    buildHeroBlock(main);
+  //  buildHeroBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
