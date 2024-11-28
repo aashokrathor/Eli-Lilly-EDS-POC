@@ -1,5 +1,5 @@
 import {
- // buildBlock,
+  //buildBlock,
   loadHeader,
   loadFooter,
   decorateButtons,
