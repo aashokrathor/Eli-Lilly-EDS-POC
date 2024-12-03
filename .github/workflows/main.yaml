@@ -12,8 +12,8 @@ jobs:
         node-version: 20
     - run: |
           if [ -e package-lock.json ]; then
-          npm ci
-          else
           npm i
+          else
+          npm ci
           fi
     - run: npm run lint
