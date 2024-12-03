@@ -171,7 +171,7 @@ export default async function decorate(block) {
         if (navSection.querySelector('ul')) { navSection.classList.add('nav-drop'); }
         navSection.setAttribute('aria-expanded', false);
         if (isDesktop.matches) {
-          navSection.addEventListener('click', () => {
+          navSection.addEventListener('mouseover', () => {
             const expanded = navSection.getAttribute('aria-expanded') === 'true';
             toggleAllNavSections(navSections);
             navSection.setAttribute(
@@ -180,7 +180,7 @@ export default async function decorate(block) {
             );
           });
         } else {
-          navSection.addEventListener('click', () => {
+          navSection.addEventListener('mouseover', () => {
             const expanded = navSection.getAttribute('aria-expanded') === 'true';
             toggleAllNavSections(navSections);
             navSection.setAttribute(
