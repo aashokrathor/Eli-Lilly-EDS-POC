@@ -3,6 +3,14 @@ main>.section:first-of-type {
     padding-right: 3rem !important;
     padding-left: 3rem !important;
 }
+.hero-banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-wrapper{
+    max-width: 1320px;
+}
 
 .hero-banner-head div{
     line-height: 1 !important;

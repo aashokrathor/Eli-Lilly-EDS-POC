@@ -11,6 +11,8 @@ header .nav-wrapper {
     box-sizing: border-box;
     box-shadow: 0 2px 2px 0 rgba(0 0 0 10%);
     padding: 1.5rem 3rem 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 header nav {
@@ -25,6 +27,7 @@ header nav {
     margin: auto;
     height: var(--nav-height);
     font-family: var(--body-font-family);
+    max-width: 1320px;
 }
 
 header nav[aria-expanded="true"] {
