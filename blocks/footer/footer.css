@@ -77,15 +77,15 @@
 /* Responsive Design */
 @media (width <= 768px) {
   .footer-wrapper {
-    padding: 15px 20px;
+      padding: 15px 20px;
   }
-
+  
   .footer-links {
-    flex-direction: column; /* Stack links vertically */
+      flex-direction: column; /* Stack links vertically */
   }
 
   .footer-links a {
-    margin-bottom: 5px; /* Add space between links */
+      margin-bottom: 5px; /* Add space between links */
   }
 }
 
@@ -94,3 +94,4 @@
     width: 83.3333%;
   }
 }
+
