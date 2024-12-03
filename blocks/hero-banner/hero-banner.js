@@ -36,6 +36,12 @@ export default async function decorate(block) {
       newconditionel.innerHTML = conditionel.innerHTML;
       conditionel.parentNode.replaceChild(newconditionel, conditionel);
     }
+
+    const wrapper = document.createElement("div")
+    wrapper.classList.add("hero-wrapper")
+    wrapper.append(parent.cloneNode(true));
+    parent.parentNode.replaceChild(wrapper, parent);
+    block.append(wrapper);
   }
 
   const pic = parent.querySelector('div picture');

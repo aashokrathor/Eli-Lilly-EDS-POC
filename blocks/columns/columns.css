@@ -28,6 +28,7 @@ main>.section{
         align-items: center;
         flex-direction: unset;
         gap: 24px;
+        padding: 20px;
     }
 
     .columns > div > div {
