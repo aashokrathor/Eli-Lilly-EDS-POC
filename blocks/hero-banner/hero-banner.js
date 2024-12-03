@@ -6,8 +6,8 @@ const attributes = {
   "data-aue-filter": "text",
   "data-aue-type" : "richtext",
 }
-function populateAttributes(element, attributes) {
-  for (const key in attributes) {
+function populateAttributes(element, attributesobj) {
+  for (const key in attributesobj) {
     element.setAttribute(key, attributes[key]);
   }
 }
@@ -29,9 +29,8 @@ export default async function decorate(block) {
     const newhead = document.createElement('p');
     newhead.classList.add('hero-header');
 
-    const parentElement = newhead.parentElement;
-    console.log("parentElement is ", parentElement);
-    populateAttributes(parentElement, attributes);
+    const parentTextContainer = parent.children[1];
+    populateAttributes(parentTextContainer, attributes);
 
     const headel = parent.querySelector('h1');
     if (headel) {
