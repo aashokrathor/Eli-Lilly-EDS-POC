@@ -1,3 +1,16 @@
+const attributes = {
+  "data-aue-resource" : "urn:aemconnection:/content/eli-lilly-aue/index/jcr:content/root/section/columns/row1/col2/text",
+  "data-aue-behavior" : "component",
+  "data-aue-prop" : "text",
+  "data-aue-label" :"Text",
+  "data-aue-filter": "text",
+  "data-aue-type" : "richtext",
+}
+function populateAttributes(element, attributes) {
+  for (const key in attributes) {
+    element.setAttribute(key, attributes[key]);
+  }
+}
 export default async function decorate(block) {
   const parent = block.querySelector('.hero-banner div');
   if (parent) {
@@ -15,6 +28,10 @@ export default async function decorate(block) {
 
     const newhead = document.createElement('p');
     newhead.classList.add('hero-header');
+
+    const parentElement = newhead.parentElement;
+    populateAttributes(parentElement, attributes);
+
     const headel = parent.querySelector('h1');
     if (headel) {
       newhead.innerHTML = headel.innerHTML;
