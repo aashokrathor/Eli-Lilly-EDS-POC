@@ -1,33 +1,154 @@
 .columns > div {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .columns img {
-  width: 100%;
+    width: 100%;
 }
 
 .columns > div > div {
-  order: 1;
+    order: 1;
 }
 
 .columns > div > .columns-img-col {
-  order: 0;
+    order: 0;
 }
 
 .columns > div > .columns-img-col img {
-  display: block;
+    display: block;
 }
 
 @media (width >= 900px) {
-  .columns > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 24px;
-  }
+    .columns > div {
+        align-items: center;
+        flex-direction: unset;
+        gap: 24px;
+    }
 
-  .columns > div > div {
-    flex: 1;
-    order: unset;
-  }
+    .columns > div > div {
+        flex: 1;
+        order: unset;
+    }
+}
+
+.columns-wrapper {
+    padding: 0 !important;
+    max-width: 100% !important;
+}
+
+.columns-wrapper .row {
+    padding: 48px 112px;
+}
+
+.columns-wrapper:nth-child(1) .row1 {
+    background-color: rgb(254 243 242);
+}
+
+.columns-wrapper:nth-child(1) .row2 {
+    background-color: rgb(241 245 248);
+}
+
+.columns-wrapper:nth-child(1) .row2 .col1 {
+    display: flex;
+    justify-content: center;
+}
+
+.columns-wrapper:nth-child(1) .row .columns-img {
+    width: 547px;
+}
+
+.columns-head {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 1.5rem !important;
+}
+
+.columns-wrapper .row ul {
+    margin-left: 0 !important;
+    margin-bottom: 1.5rem !important;
+    padding-left: 20px;
+}
+
+.columns-wrapper .row ul li {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.columns-wrapper .row ul li .listhead {
+    font-weight: 500;
+}
+
+.columns-wrapper .row .col p:nth-child(2) {
+    font-size: 24px;
+    line-height: 1.7;
+    font-weight: 300 !important;
+}
+
+.columns-wrapper:nth-child(1) .row1 .col1 p:nth-last-child(1) {
+    font-size: 12px;
+    line-height: 1.3;
+    font-style: normal;
+    margin-top: 1.5rem;
+}
+
+.columns-wrapper .row .col select {
+    width: 142px !important;
+    height: 40px !important;
+    border-radius: 4px !important;
+    border: 1px solid #9e9e9e !important;
+    appearance: none !important;
+    background: #fff 90% no-repeat url("/icons/caret-down.svg") !important;
+    text-align: center;
+}
+
+.columns-select-container {
+    display: flex;
+    align-items: end;
+    gap: 2.5rem;
+}
+
+.columns-cta {
+    box-shadow: 0 2px 3px 0 rgba(0 0 0 20%);
+    cursor: pointer;
+    margin-bottom: 0;
+    background-color: transparent !important;
+    color: #0f3a85 !important;
+    outline: 1.5px solid #0f3a85;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    text-align: center;
+    font-weight: 600;
+    border: unset;
+    border-radius: 24px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 19px;
+    line-height: 24px;
+    margin-right: 1rem !important;
+}
+
+.columns-cta:hover {
+    outline: 2px solid #0f3a85;
+    text-decoration: none;
+}
+
+.columns-subhead {
+    font-size: 24px;
+    line-height: 1.7;
+    color: #212121;
+}
+
+.columns-wrapper:nth-child(1) .row3 .col1 p:nth-last-child(2) {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.columns-wrapper:nth-child(1) .row3 .col1 p:nth-last-child(1) a {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #0f3a85;
+    text-decoration: underline;
 }
