@@ -30,6 +30,7 @@ export default async function decorate(block) {
     newhead.classList.add('hero-header');
 
     const parentElement = newhead.parentElement;
+    console.log("parentElement is ", parentElement);
     populateAttributes(parentElement, attributes);
 
     const headel = parent.querySelector('h1');
