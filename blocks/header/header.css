@@ -239,12 +239,16 @@ header nav .nav-sections ul > li > ul > li {
     font-weight: 400;
 }
 
-header nav .nav-sections .default-content-wrapper > ul > li {
+header nav .nav-sections .default-content-wrapper>ul>li {
     font-size: 18px;
     border: none;
     outline: none;
     color: #212121;
     font-weight: 400;
+}
+
+header nav .nav-sections ul>li>ul>li:hover {
+    background-color: #eee;
 }
 
 header nav .nav-sections .nav-drop::after {
@@ -362,8 +366,10 @@ header nav .nav-sections .default-content-wrapper>ul>li[aria-expanded="true"]>ul
     left: 0;
     width: 100%;
     top: calc(100% + 16px);
-    padding: 16px;
+    padding: 8px 5px;
     background-color: #fff;
     white-space: initial;
     min-width: 125px;
 }
+
+       

@@ -170,26 +170,41 @@ export default async function decorate(block) {
         }
         if (navSection.querySelector('ul')) { navSection.classList.add('nav-drop'); }
         navSection.setAttribute('aria-expanded', false);
-        if (isDesktop.matches) {
-          navSection.addEventListener('mouseover', () => {
+
+          if (isDesktop.matches) {
+             navSection.addEventListener('mouseover', () => {
             const expanded = navSection.getAttribute('aria-expanded') === 'true';
             toggleAllNavSections(navSections);
             navSection.setAttribute(
               'aria-expanded',
-              expanded ? 'false' : 'true',
+              'true'
             );
+
           });
-        } else {
-          navSection.addEventListener('mouseover', () => {
+          navSection.addEventListener('focusout', (e)=>{
+              const nav = e.currentTarget;
+              if (!nav.contains(e.relatedTarget)) {
+                navSection.setAttribute(
+              'aria-expanded',
+              'false'
+            );
+              }
+          });
+          }
+          else{
+              navSection.addEventListener('click', () => {
             const expanded = navSection.getAttribute('aria-expanded') === 'true';
             toggleAllNavSections(navSections);
             navSection.setAttribute(
               'aria-expanded',
-              expanded ? 'false' : 'true',
+               expanded ? 'false' : 'true',
             );
+
           });
-        }
-      });
+          }
+       
+         
+        });
   }
 
   // hamburger for mobile

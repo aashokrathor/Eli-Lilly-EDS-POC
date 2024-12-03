@@ -97,6 +97,12 @@ export default function decorate(block) {
         pic.parentNode.replaceChild(div, pic); // Replace the picture element with the new div
       }
     }
+
+    const wrapper = document.createElement("div")
+    wrapper.classList.add("row-wrapper")
+    wrapper.append(row.cloneNode(true));
+    row.parentNode.replaceChild(wrapper, row);
+    block.append(wrapper);
   });
 }
 
