@@ -16,7 +16,7 @@ function sampleRUM(checkpoint, data) {
   const timeShift = () => (window.performance ? window.performance.now() : Date.now() - window.hlx.rum.firstReadTime);
   try {
     window.hlx = window.hlx || {};
-    sampleRUM.enhance = () => {};
+    sampleRUM.enhance = () => { };
     if (!window.hlx.rum) {
       const param = new URLSearchParams(window.location.search).get('rum');
       const weight = (window.SAMPLE_PAGEVIEWS_AT_RATE === 'high' && 10)
@@ -148,6 +148,21 @@ function setup() {
  */
 
 function init() {
+  const reactScript = document.createElement('script');
+  reactScript.src = 'https://unpkg.com/react@17/umd/react.development.js';
+  reactScript.crossOrigin = 'anonymous';
+  document.head.prepend(reactScript);
+  
+  const reactDomScript = document.createElement('script');
+  reactDomScript.src = 'https://unpkg.com/react-dom@17/umd/react-dom.development.js';
+  reactDomScript.crossOrigin = 'anonymous';
+  document.head.prepend(reactDomScript);
+  const footer = document.querySelector('footer'); 
+  // Create a new div element
+  const newDiv = document.createElement('div');
+  newDiv.id = 'root';
+  // Insert the new div before the footer
+  footer.parentNode.insertBefore(newDiv, footer);
   setup();
   sampleRUM();
 }

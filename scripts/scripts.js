@@ -12,7 +12,7 @@ import {
   loadSections,
   loadCSS,
 } from './aem.js';
-
+import { App } from '../react/index.js';
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
@@ -105,9 +105,8 @@ async function loadLazy(doc) {
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();
 
-  loadHeader(doc.querySelector('header'));
-  loadFooter(doc.querySelector('footer'));
-
+  loadHeader(doc.querySelector('header')); 
+  loadFooter(doc.querySelector('footer')); 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
 }
@@ -122,10 +121,18 @@ function loadDelayed() {
   // load anything that can be postponed to the latest here
 }
 
+function reactInit() {
+  ReactDOM.render(
+    React.createElement(App),
+    document.getElementById('root')
+);
+}
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
+  console.log('2nd')
+  reactInit()
 }
 
 loadPage();

@@ -256,3 +256,9 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+#root img{
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
