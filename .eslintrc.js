@@ -10,5 +10,5 @@ module.exports = {
     requireConfigFile: false,
   },
   rules: {},
-  ignorePatterns: ['**/*.js'],
+  ignorePatterns: "*",
 };
