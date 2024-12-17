@@ -333,9 +333,3 @@ main .teaser-container{
   padding: 4.5rem;
 }
 
-.section :not(:has(:first-child)) {
-  display: none;
-}
-.section:empty {
-  display: none;
-}
