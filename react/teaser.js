@@ -4,6 +4,7 @@ export const Teaser = () => {
     const [teaserData, setTeaserData] = React.useState('');
     const loadData = async () => {
         const blocks = await loadBlock(document.querySelector('div.teaser.block'));
+        blocks.classList.add("react-comp")
         let reactnode = blocks.querySelector('div')
         reactnode.remove()
         const teaserwrapper = document.createElement('div');

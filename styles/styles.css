@@ -264,60 +264,78 @@ main .section.highlight {
 }
 /* teaser */
 
-.teaser-row-wrapper{
+.react-comp .teaser-row-wrapper{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 -16px;  
 }
-.teaser-row-wrapper > div{
+.react-comp .teaser-row-wrapper > div{
   width: 50%;
 }
-.teaser-row-wrapper .teaser-row-col2{
+.react-comp .teaser-row-wrapper .teaser-row-col2{
   display: flex;
   justify-content: center;
 }
-.teaser-row-wrapper .teaser-row-col1 {
+.react-comp  .teaser-row-wrapper .teaser-row-col1 {
   display: flex;
       flex-direction: column;
 }
-.teaser-row-col2 div > img{
- width: 414px;
+.react-comp .teaser-row-col2 div > img{
+ width: 414px !important;
 }
-.teaser-row-wrapper .teaser-head{
+.react-comp .teaser-row-wrapper .teaser-head{
   font-size: 32px;
   line-height: 1.5;
 }
-.teaser-row-wrapper p:nth-child(1){
+.react-comp .teaser-row-wrapper p:nth-child(1){
   font-size: 32px;
   line-height: 1.5;
   margin-bottom: 1.5rem !important;
 }
-.teaser-row-wrapper p:nth-child(2){
+.react-comp .teaser-row-wrapper p:nth-child(2){
   font-size: 24px;
   line-height: 1.7;
   font-weight: 300 !important;
   margin-top: 0 !important;
   margin-bottom: 1.5rem !important;
 }
-.teaser-row-wrapper p:nth-child(4){
+.react-comp .teaser-row-wrapper p:nth-child(4){
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 1rem !important;
   margin-top: 0 !important;
 }
-.teaser-row-wrapper .cta-container{
+.react-comp .teaser-row-wrapper .cta-container{
   margin-top: 0 !important;
 }
 
-.teaser-row-wrapper p:nth-last-child(1) a{  text-decoration: underline !important;
+.react-comp .teaser-row-wrapper p:nth-last-child(1) a{  text-decoration: underline !important;
   background-color: transparent !important;
   padding: 0 !important;
   color: #0f3a85 !important;
   margin-top: 0 !important;
 }
- .teaser-wrapper{
+.react-comp .teaser-wrapper{
   max-width: 1320px !important;
   padding-top: 4.5rem !important;
   padding-bottom: 4.5rem !important;
+}
+main .teaser-container{
+  display: none;
+}
+#root{
+  margin: 0 !important;
+  padding-right: 3rem !important;
+  padding-left: 3rem !important;
+}
+.react-comp{
+  padding: 4.5rem;
+}
+
+.section :not(:has(:first-child)) {
+  display: none;
+}
+.section:empty {
+  display: none;
 }
