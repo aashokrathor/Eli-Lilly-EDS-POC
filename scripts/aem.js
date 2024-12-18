@@ -148,15 +148,15 @@ function setup() {
  */
 
 function init() {
-  const reactScript = document.createElement('script');
-  reactScript.src = 'https://unpkg.com/react@17/umd/react.development.js';
-  reactScript.crossOrigin = 'anonymous';
-  document.head.prepend(reactScript);
+  // const reactScript = document.createElement('script');
+  // reactScript.src = 'https://unpkg.com/react@17/umd/react.development.js';
+  // reactScript.crossOrigin = 'anonymous';
+  // document.head.prepend(reactScript);
   
-  const reactDomScript = document.createElement('script');
-  reactDomScript.src = 'https://unpkg.com/react-dom@17/umd/react-dom.development.js';
-  reactDomScript.crossOrigin = 'anonymous';
-  document.head.prepend(reactDomScript);
+  // const reactDomScript = document.createElement('script');
+  // reactDomScript.src = 'https://unpkg.com/react-dom@17/umd/react-dom.development.js';
+  // reactDomScript.crossOrigin = 'anonymous';
+  // document.head.prepend(reactDomScript);
   const footer = document.querySelector('footer'); 
   // Create a new div element
   const newDiv = document.createElement('div');
