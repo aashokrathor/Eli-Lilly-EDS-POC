@@ -3,6 +3,13 @@
     "host": "https://main--eli-lilly-eds-poc--aashokrathor.aem.page",
     "plugins": [
         {
+            "id": "Library",
+            "title": "Library",
+            "environments": [ "edit" ],
+            "url": "https://main--wknd--hlxsites.hlx.live/tools/sidekick/library.html",
+            "includePaths": [ "**.docx**" ]
+        },
+        {
             "id": "asset-library",
             "title": "My Assets",
             "environments": [ "edit" ],
@@ -11,6 +18,14 @@
             "includePaths": [ "**.docx**" ],
             "passConfig": true,
             "paletteRect": "top: 50px; bottom: 10px; right: 10px; left: auto; width:800px; height: calc(100vh - 60px)"
-          }
+        },
+        {
+            "id": "generate-variations",
+            "title": "Generate Variations",
+            "url": "https://experience.adobe.com/aem/generate-variations",
+            "passConfig": true,
+            "environments": [ "edit", "live", "edit" ],
+            "includePaths": [ "**.docx**" ]
+        }
     ] 
 }
